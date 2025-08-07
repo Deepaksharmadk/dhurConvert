@@ -125,7 +125,7 @@ export default function Home() {
                             <Input
                                 id="decimal-input"
                                 type="number"
-                                placeholder="Enter value in Decimal / दशमलव में मान दर्ज करें"
+                                placeholder="Enter value in Decimal / डेसिमल में मान दर्ज करें"
                                 value={decimalValue}
                                 onChange={handleDecimalChange}      // 🔁 Auto convert
                                 onKeyDown={handleDecimalKeyDown}   // ⌨️ Enter key
