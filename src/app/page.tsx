@@ -39,10 +39,11 @@ export default function Home() {
         const result = Number(value) / (12 / 55)
         setDhurResult(result.toFixed(4))              // 4-digit decimal
         // setRoundedDhur(String(Math.round(result)))    // 🔁 Rounded result
+        // ✅ अगर 0 से शुरू है तो वैसा ही दिखाएं
         if (result < 1) {
-            setRoundedDecimal(result.toFixed(4))
+            setRoundedDhur(result.toFixed(4))
         } else {
-            setRoundedDecimal(String(Math.round(result)))
+            setRoundedDhur(String(Math.round(result)))
         }
     }
 
