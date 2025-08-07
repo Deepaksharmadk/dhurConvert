@@ -68,8 +68,8 @@ export default function Home() {
 
     // 🔽 UI Start
     return (
-        <div className="grid gap-4 m-4 sm:grid-cols-1 border border-cyan-300">
-            <div className="rounded shadow-xl sm:m-4 m-2">
+        <div className="grid gap-4 m-4 sm:grid-cols-1 min-h-[600px] ">
+            <div className=" sm:m-4 m-2">
                 {/* 🧭 Tabs for conversion direction */}
                 <Tabs color="teal" variant="pills" defaultValue="decimaltodhur">
                     <Tabs.List grow>
