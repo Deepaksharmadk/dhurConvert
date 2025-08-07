@@ -22,7 +22,11 @@ export default function Home() {
         }
         const result = (12 / 55) * Number(value)
         setDecimalResult(result.toFixed(4))              // 4-digit decimal
-        setRoundedDecimal(String(Math.round(result)))    // 🔁 Rounded result
+        if (result < 1) {
+            setRoundedDecimal(result.toFixed(4))
+        } else {
+            setRoundedDecimal(String(Math.round(result)))
+        }    // 🔁 Rounded result
     }
 
     // ✅ Decimal ➝ Dhur
@@ -34,7 +38,12 @@ export default function Home() {
         }
         const result = Number(value) / (12 / 55)
         setDhurResult(result.toFixed(4))              // 4-digit decimal
-        setRoundedDhur(String(Math.round(result)))    // 🔁 Rounded result
+        // setRoundedDhur(String(Math.round(result)))    // 🔁 Rounded result
+        if (result < 1) {
+            setRoundedDecimal(result.toFixed(4))
+        } else {
+            setRoundedDecimal(String(Math.round(result)))
+        }
     }
 
 
