@@ -14,7 +14,7 @@ export default function Home() {
 
     // ✅ Function: Dhur से Decimal में बदलना
     // ✅ Dhur ➝ Decimal
-    const convertDhurToDecimal = (value: string) => {
+    const convertDhurToDecimal = (value: string,) => {
         if (!value || isNaN(Number(value))) {
             setDecimalResult("कृपया एक मान्य संख्या दर्ज करें")
             setRoundedDecimal("")
@@ -108,7 +108,7 @@ export default function Home() {
                         </Button>
 
                         {/* 📊 Result Display */}
-                        {decimalResult.length > 0 && (
+                        {dhurValue.length > 0 && decimalResult.length > 0 && (
                             <div className="mt-4 p-3 bg-gray-100 rounded-md">
                                 <Title c={"red"} order={4}>Result (Decimal) / परिणाम (डेसिमल):</Title>
                                 <Text c="green" fw={700}>{decimalResult} डेसिमल</Text>
@@ -138,7 +138,7 @@ export default function Home() {
                         </Button>
 
                         {/* 📊 Result Display */}
-                        {dhurResult.length > 0 && (
+                        {decimalValue.length > 0 && dhurResult.length > 0 && (
                             <div className="mt-4 p-3 bg-gray-100 rounded-md">
                                 <Title c={"red"} order={3}>Result (Dhur) / परिणाम (धुर)</Title>
                                 <Text c="green" fw={700}>{dhurResult} धुर</Text>
@@ -146,6 +146,7 @@ export default function Home() {
                                 <Text c="green" fw={700}>{roundedDhur} धुर</Text>
                             </div>
                         )}
+
                     </Tabs.Panel>
                 </Tabs>
             </div>
