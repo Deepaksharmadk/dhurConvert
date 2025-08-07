@@ -83,12 +83,13 @@ export default function Home() {
                 {/* 🧭 Tabs for conversion direction */}
                 <Tabs color="teal" variant="pills" defaultValue="decimaltodhur">
                     <Tabs.List grow>
-                        <Tabs.Tab value="decimaltodhur">Dhur to Decimal / धुर से डेसिमल में</Tabs.Tab>
-                        <Tabs.Tab value="dhurtodecimal">Decimal to Dhur / डेसिमल से धुर में</Tabs.Tab>
+
+                        <Tabs.Tab value="decimaltodhur">Decimal to Dhur / डेसिमल से धुर में</Tabs.Tab>
+                        <Tabs.Tab value="dhurtodecimal">Dhur to Decimal / धुर से डेसिमल में</Tabs.Tab>
                     </Tabs.List>
 
                     {/* ----------------------- DHUR TO DECIMAL ------------------------ */}
-                    <Tabs.Panel value="decimaltodhur">
+                    <Tabs.Panel value="dhurtodecimal">
                         {/* 🔢 Input: Dhur value */}
                         <div className="mt-4">
                             <Input
@@ -118,7 +119,7 @@ export default function Home() {
                     </Tabs.Panel>
 
                     {/* ----------------------- DECIMAL TO DHUR ------------------------ */}
-                    <Tabs.Panel value="dhurtodecimal">
+                    <Tabs.Panel value="decimaltodhur">
                         {/* 🔢 Input: Decimal value */}
                         <div className="mt-4">
                             <Input
