@@ -1,18 +1,8 @@
 "use client"
-import { Button, Input, Tabs, Text, Title } from "@mantine/core";
+import { Button, Input, Tabs, Text, } from "@mantine/core";
 import { EqualApproximately } from "lucide-react";
 import { useState } from "react";
-export const metadata = {
-    title: "Deepak Sharma - Sanjay Cyber Center | Dhur Converter",
-    description:
-        "Official website of Deepak Sharma and Sanjay Cyber Center. Also includes Dhur to Katha land measurement conversion tool.",
-    keywords: [
-        "Deepak Sharma patania",
-        "Sanjay Cyber Center patania",
-        "Dhur Converter",
-        "Land measurement",
-    ],
-};
+
 export default function Home() {
     // 💡 States to manage input और result values
     const [dhurValue, setDhurValue] = useState<string>("")

@@ -17,21 +17,23 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-    title: "Dhur Converter - Land Measurement Calculator",
+    title: "Dhur Converter - Land Measurement Calculator Deepak Sharma - Sanjay Cyber Center",
     description:
-        "Convert Dhur to Katha, Bigha, and other land measurement units instantly. Free online Dhur conversion tool.",
+        "Convert Dhur to Katha, Bigha, and other land measurement units instantly. Free online Dhur conversion tool patania biraul darbhanga bihar.",
     keywords: [
         "Dhur to Katha",
         "Dhur Converter",
         "Bigha Converter",
         "Land measurement Bihar",
-        "Dhur calculation"
+        "Dhur calculation",
+        "Deepak Sharma patania",
+        "Sanjay Cyber Center patania",
     ],
     authors: [{ name: "Deepak Sharma" }],
     openGraph: {
         title: "Dhur Converter - Land Measurement Calculator",
         description:
-            "Free online tool to convert Dhur to Katha, Bigha, and other units instantly.",
+            "Free online tool to convert Dhur to Katha, Bigha, and other units instantly Deepak Sharma - Sanjay Cyber Center patania biraul darbhanga bihar.",
         url: "https://dhurconvert.vercel.app",
         siteName: "Dhur Converter",
         images: [
