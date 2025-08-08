@@ -1,5 +1,6 @@
 "use client"
 import { Button, Input, Tabs, Text, Title } from "@mantine/core";
+import { EqualApproximately } from "lucide-react";
 import { useState } from "react";
 
 export default function Home() {
@@ -10,6 +11,21 @@ export default function Home() {
     const [decimalResult, setDecimalResult] = useState<string>("")
     const [roundedDecimal, setRoundedDecimal] = useState<string>("")
     const [roundedDhur, setRoundedDhur] = useState<string>("")
+    const [kataFromDhur, setKataFromDhur] = useState<string>("") // ✅ Dhur → Katha
+    const [kataFromDecimal, setKataFromDecimal] = useState<string>("") // ✅ Decimal → Dhur → Kath
+
+    function formatKathaDhurFromDhur(dhurValue: number) {
+        const katha = Math.floor(dhurValue / 20); // 1 कट्ठा = 20 धुर
+        const remainingDhur = Math.round((dhurValue % 20) * 10) / 10; // दशमलव को भी संभालेगा
+
+        return `${katha} कट्ठा ${remainingDhur > 0 ? ` ${remainingDhur} धुर` : ""}`;
+    }
+
+
+
+
+
+
 
 
     // ✅ Function: Dhur से Decimal में बदलना
@@ -27,6 +43,10 @@ export default function Home() {
         } else {
             setRoundedDecimal(String(Math.round(result)))
         }    // 🔁 Rounded result
+        // ✅ Dhur → Katha (formatted)
+        // const kataValue = Number(value) / 20
+        setKataFromDhur(formatKathaDhurFromDhur(Number(value)));
+
     }
 
     // ✅ Decimal ➝ Dhur
@@ -45,6 +65,9 @@ export default function Home() {
         } else {
             setRoundedDhur(String(Math.round(result)))
         }
+        // const kataValue = result / 20
+        setKataFromDecimal(formatKathaDhurFromDhur(result))
+
     }
 
 
@@ -110,10 +133,13 @@ export default function Home() {
                         {/* 📊 Result Display */}
                         {dhurValue.length > 0 && decimalResult.length > 0 && (
                             <div className="mt-4 p-3 bg-gray-100 rounded-md">
-                                <Title c={"red"} order={4}>Result (Decimal) / परिणाम (डेसिमल):</Title>
-                                <Text c="green" fw={700}>{decimalResult} डेसिमल</Text>
-                                <Title order={5} mt="sm">Considered Result / अंतिम राउंडेड मान:</Title>
-                                <Text c="green" fw={700}>{roundedDecimal} डेसिमल</Text>
+                                <Text c="red" fw={700}>
+                                    Result (Decimal) / परिणाम (डेसिमल) : <Text size="xl" fw={600} span c="green">{decimalResult} <EqualApproximately className="inline" color="red" strokeWidth={3} size={25} /> {roundedDecimal} डेसिमल</Text>
+                                </Text>
+                                <Text c="red" fw={700}>
+                                    Result कट्ठा  : <Text size="xl" fw={600} span c="green">{kataFromDhur}</Text>
+                                </Text>
+
                             </div>
                         )}
                     </Tabs.Panel>
@@ -140,10 +166,14 @@ export default function Home() {
                         {/* 📊 Result Display */}
                         {decimalValue.length > 0 && dhurResult.length > 0 && (
                             <div className="mt-4 p-3 bg-gray-100 rounded-md">
-                                <Title c={"red"} order={3}>Result (Dhur) / परिणाम (धुर)</Title>
-                                <Text c="green" fw={700}>{dhurResult} धुर</Text>
-                                <Title order={4} mt="sm">Considered Result / अंतिम राउंडेड मान:</Title>
-                                <Text c="green" fw={700}>{roundedDhur} धुर</Text>
+                                <Text c="red" fw={700}>
+                                    Result (Dhur) / परिणाम (धुर)  : <Text size="xl" fw={600} span c="green">{dhurResult} <EqualApproximately className="inline" color="red" strokeWidth={3} size={25} /> {roundedDhur} धुर</Text>
+                                </Text>
+                                <Text c="red" fw={700}>
+                                    Result कट्ठा  : <Text size="xl" fw={600} span c="green">{kataFromDecimal}</Text>
+                                </Text>
+
+
                             </div>
                         )}
 
