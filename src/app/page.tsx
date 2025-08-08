@@ -134,10 +134,10 @@ export default function Home() {
                         {dhurValue.length > 0 && decimalResult.length > 0 && (
                             <div className="mt-4 p-3 bg-gray-100 rounded-md">
                                 <Text c="red" fw={700}>
-                                    Result (Decimal) / परिणाम (डेसिमल) : <Text size="xl" fw={600} span c="green">{decimalResult} <EqualApproximately className="inline" color="red" strokeWidth={3} size={25} /> {roundedDecimal} डेसिमल</Text>
+                                    Result (Decimal) / परिणाम (डेसिमल) = <Text size="xl" fw={600} span c="green">{decimalResult} <EqualApproximately className="inline" color="red" strokeWidth={3} size={25} /> {roundedDecimal} डेसिमल</Text>
                                 </Text>
                                 <Text c="red" fw={700}>
-                                    Result कट्ठा  : <Text size="xl" fw={600} span c="green">{kataFromDhur}</Text>
+                                    Result कट्ठा  = <Text size="xl" fw={600} span c="green">{kataFromDhur}</Text>
                                 </Text>
 
                             </div>
@@ -167,10 +167,10 @@ export default function Home() {
                         {decimalValue.length > 0 && dhurResult.length > 0 && (
                             <div className="mt-4 p-3 bg-gray-100 rounded-md">
                                 <Text c="red" fw={700}>
-                                    Result (Dhur) / परिणाम (धुर)  : <Text size="xl" fw={600} span c="green">{dhurResult} <EqualApproximately className="inline" color="red" strokeWidth={3} size={25} /> {roundedDhur} धुर</Text>
+                                    Result (Dhur) / परिणाम (धुर)  = <Text size="xl" fw={600} span c="green">{dhurResult} <EqualApproximately className="inline" color="red" strokeWidth={3} size={25} /> {roundedDhur} धुर</Text>
                                 </Text>
                                 <Text c="red" fw={700}>
-                                    Result कट्ठा  : <Text size="xl" fw={600} span c="green">{kataFromDecimal}</Text>
+                                    Result कट्ठा  = <Text size="xl" fw={600} span c="green">{kataFromDecimal}</Text>
                                 </Text>
 
 
