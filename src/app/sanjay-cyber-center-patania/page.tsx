@@ -1,4 +1,5 @@
 // app/sanjay-cyber-center-patania/page.tsx
+import { redirect } from "next/navigation";
 export const metadata = {
     title: "Sanjay Cyber Center Patania - Deepak Sharma",
     description:
@@ -12,6 +13,7 @@ export const metadata = {
 };
 
 export default function SanjayCyberCenterPage() {
+    redirect("/");
     return (
         <main>
             <h1>Sanjay Cyber Center Patania</h1>
