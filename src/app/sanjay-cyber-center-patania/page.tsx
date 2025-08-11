@@ -16,13 +16,7 @@ export default function SanjayCyberCenterPage() {
     redirect("/");
     return (
         <main>
-            <h1>Sanjay Cyber Center Patania</h1>
-            <p>
-                <strong>Sanjay Cyber Center</strong> Patania गांव में स्थित है और इसे{" "}
-                <strong>Deepak Sharma</strong> द्वारा चलाया जाता है। यहां आपको
-                online services जैसे कि आधार कार्ड, पैन कार्ड, बिजली बिल, और
-                जमीन मापने के लिए <strong>Dhur Converter Tool</strong> की सुविधा मिलती है।
-            </p>
+           <h2>Deepak Cyber Center Patania</h2>
         </main>
     );
 }
